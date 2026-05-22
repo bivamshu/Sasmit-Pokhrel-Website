@@ -276,3 +276,5 @@ git push origin main
 
 Everything is now completely backed up, synchronized, and documented without a single dangling reference or warning file in your problems log! Where should we point the ship next?
 
+### `MediaCoverage.svelte`
+* **Purpose:** Renders a three-column media grid component highlighting recent video appearances, fireside talks, and external discussions. Implements a clean horizontal slide mechanism for constrained touch layouts.
