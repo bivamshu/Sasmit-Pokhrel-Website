@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Navbar, HeroText, HeroVisuals, LatestUpdates } from '$lib/components';
+    import { Navbar, HeroText, HeroVisuals, CandidateIntro, LatestUpdates } from '$lib/components';
   </script>
   
   <main class="relative w-full min-h-screen bg-[#0d2d3a] flex flex-col justify-between overflow-hidden">
@@ -22,4 +22,7 @@
     <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black/20 to-transparent pointer-events-none z-0"></div>
   </main>
   
+ 
+  
   <LatestUpdates />
+  <CandidateIntro />
