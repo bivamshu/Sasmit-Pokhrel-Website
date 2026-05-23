@@ -7,8 +7,15 @@
       WhoIsSasmit, 
       SharedVision,
       LatestUpdates,
-      MediaCoverage
+      MediaCoverage,
+      Footer,
+      PrivacyModal,
+      TermsModal
     } from '$lib/components';
+  
+    // Instantiate Svelte 5 state reactive variable flags
+    let showPrivacyPolicy = $state(false);
+    let showTermsOfService = $state(false);
   </script>
   
   <main class="relative w-full min-h-screen bg-[#0d2d3a] flex flex-col justify-between overflow-hidden">
@@ -29,11 +36,15 @@
   </main>
   
   <CandidateIntro />
-  
   <WhoIsSasmit />
-  
   <SharedVision />
-  
   <LatestUpdates />
-  
   <MediaCoverage />
+  
+  <Footer 
+    onPrivacyClick={() => showPrivacyPolicy = true} 
+    onTermsClick={() => showTermsOfService = true} 
+  />
+  
+  <PrivacyModal bind:isOpen={showPrivacyPolicy} />
+  <TermsModal bind:isOpen={showTermsOfService} />
